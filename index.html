@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Analista de Dados: Cássio Cândido Ribeiro</title>
+    <!-- Ícone da página (favicon) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📊</text></svg>">
+    <!-- Configurações básicas e viewport para responsividade -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Inclui o Tailwind CSS para estilização completa -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inclui Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inclui a biblioteca html2pdf para exportar o conteúdo para PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <!-- Configurações de estilo gerais (agora, em grande parte, controladas por classes do Tailwind) -->
+    <style>
+        /* Define a fonte Inter para todo o documento, com estilos para melhor legibilidade */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+    <!-- Container principal com espaçamento responsivo e largura máxima -->
+    <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8 max-w-6xl">
+        
+        <!-- Botão de Exportar para PDF, alinhado à direita -->
+        <div class="flex justify-end mb-10">
+            <button id="exportPdfBtn" class="bg-emerald-600 text-white font-semibold py-3 px-6 rounded-md shadow-md hover:bg-emerald-700 transition-colors duration-200">
+                <i class="fas fa-file-pdf mr-2"></i>.PDF
+            </button>
+        </div>
+
+        <!-- Conteúdo principal do portfólio que será exportado para PDF -->
+        <div id="portfolioContent">
+            
+            <!-- Banner de boas-vindas com informações do profissional -->
+            <section class="bg-white shadow-lg rounded-lg p-10 mb-16 text-center border-t-4 border-blue-600">
+                <header class="mb-8">
+                    <h1 class="text-4xl sm:text-6xl md:text-6xl font-extrabold leading-tight mb-4 text-gray-900">
+                        Cássio Cândido Ribeiro
+                    </h1>
+                    <h2 class="text-xl sm:text-3xl md:text-3xl font-light text-gray-700">
+                        <b>Analista de Dados</b>
+                    </h2>
+                </header>
+            </section>
+
+                <!-- Sub-seção: Minha Abordagem -->
+                    <div class="bg-white flex flex-col space-y-8  p-6 rounded-xl border-l-4 border-blue-600">
+                        <ul class="space-y-6 text-lg text-gray-700">
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-search"></i></span>
+                                <span>Identificação de problemas</span>
+                            </li>
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-chart-line"></i></span>
+                                <span>Informações estratégicas</span>
+                            </li>
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-calendar-check"></i></span>
+                                <span>Planos de ação</span>
+                            </li>
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-cogs"></i></span>
+                                <span>Implementação de processos mais eficientes</span>
+                            </li>
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-robot"></i></span>
+                                <span>Automatização de processos</span><br>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <br>
+                <!-- Sub-seção: O Que Você Ganha -->
+                    <div class="bg-white flex flex-col space-y-8 p-6 rounded-xl border-l-4 border-blue-600">
+                        <ul class="space-y-6 text-lg text-gray-700">
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-hourglass-half"></i></span>
+                                <span>Otimização do tempo dos funcionários</span>
+                            </li>
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-rocket"></i></span>
+                                <span>Aumento da produtividade e eficiência operacional</span>
+                            </li>
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-chart-bar"></i></span>
+                                <span>Clareza sobre os indicadores de performance (KPIs)</span>
+                            </li>
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-bullseye"></i></span>
+                                <span>Tomada de decisões mais estratégicas e assertivas</span>
+                            </li>
+                            <li class="flex items-start transition-all duration-200 transform hover:translate-x-2">
+                                <span class="text-blue-600 mr-4 text-2xl"><i class="fas fa-eye"></i></span>
+                                <span>Transparência do raciocínio metodológico</span>
+                            </li>
+                        </ul>
+                    </div>
+            </section>
+            <br>
+            <!-- Seção de Índice para navegação interna -->
+            <section class="bg-white shadow-lg rounded-lg p-8 mb-16 transition-transform duration-200 hover:shadow-xl hover:translate-y-[-2px]">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 border-b-2 border-blue-600 pb-2 mb-10 inline-block pr-4">Índice</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center text-lg text-gray-700">
+                    <!-- Links de navegação para cada seção -->
+                    <a href="#conhecimento-tecnico" class="p-5 bg-gray-50 rounded-md shadow-sm flex flex-col items-center justify-center border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <i class="fas fa-laptop-code text-blue-600 text-5xl mb-3"></i>
+                        <p class="font-semibold text-gray-800">Conhecimento</p>
+                    </a>
+                    <a href="#projetos" class="p-5 bg-gray-50 rounded-md shadow-sm flex flex-col items-center justify-center border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <i class="fas fa-chart-line text-blue-600 text-5xl mb-3"></i>
+                        <p class="font-semibold text-gray-800">Projetos</p>
+                    </a>
+                    <a href="#sobre-mim" class="p-5 bg-gray-50 rounded-md shadow-sm flex flex-col items-center justify-center border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <i class="fas fa-user-tie text-blue-600 text-5xl mb-3"></i>
+                        <p class="font-semibold text-gray-800">Sobre mim</p>
+                    </a>
+                    <a href="#contato" class="p-5 bg-gray-50 rounded-md shadow-sm flex flex-col items-center justify-center border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <i class="fas fa-paper-plane text-blue-600 text-5xl mb-3"></i>
+                        <p class="font-semibold text-gray-800">Contato</p>
+                    </a>
+                </div>
+            </section>
+
+
+            <!-- Seção de Conhecimento Técnico -->
+            <section id="conhecimento-tecnico" class="bg-white shadow-lg rounded-lg p-8 mb-16 transition-transform duration-200 hover:shadow-xl hover:translate-y-[-2px]">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 border-b-2 border-blue-600 pb-2 mb-10 inline-block pr-4">Conhecimento</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-700 text-base">
+                    
+                    <article class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <span class="icon text-blue-600 text-5xl mb-4"><i class="fa-solid fa-file-excel"></i></span>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Escritório</h3>
+                        <ul class="list-disc list-inside space-y-1 text-left text-sm text-gray-700">
+                            <li>Excel Avançado</li>
+                            <li>Word</li>
+                            <li>PowerPoint</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <span class="icon text-blue-600 text-5xl mb-4"><i class="fa-solid fa-code"></i></span>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Programação</h3>
+                        <ul class="list-disc list-inside space-y-1 text-left text-sm text-gray-700">
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>DAX</li>
+                        </ul>
+                    </article>
+
+                    <article class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <span class="icon text-blue-600 text-5xl mb-4"><i class="fa-solid fa-chart-pie"></i></span>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Lógica</h3>
+                        <ul class="list-disc list-inside space-y-1 text-left text-sm text-gray-700">
+                            <li>Raciocínio analítico</li>
+                            <li>Estatística descritiva</li>
+                            <li>Arquitetura de Regras de Negócio</li>
+                        </ul>
+                    </article>
+
+                    <article class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <span class="icon text-blue-600 text-5xl mb-4"><i class="fa-solid fa-chart-bar"></i></span>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Visualização</h3>
+                        <ul class="list-disc list-inside space-y-1 text-left text-sm text-gray-700">
+                            <li>Relatórios via mensagem de texto</li>
+                            <li>Streamlit</li> 
+                            <li>Power BI</li>
+                        </ul>
+                    </article>
+
+                    <article class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <span class="icon text-blue-600 text-5xl mb-4"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Implantação</h3>
+                        <ul class="list-disc list-inside space-y-1 text-left text-sm text-gray-700">
+                            <li>Rede local</li>
+                            <li>Cloud</li>
+                            <li>Git</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 hover:bg-gray-100 transition-colors duration-200">
+                        <span class="icon text-blue-600 text-5xl mb-4"><i class="fa-solid fa-database"></i></span>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Banco de Dados</h3>
+                        <ul class="list-disc list-inside space-y-1 text-left text-sm text-gray-700">
+                            <li>DBeaver</li>
+                            <li>PostgreSQL</li>
+                            <li>Firebird</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+
+            <!-- Seção de Projetos -->
+            <section id="projetos" class="bg-white shadow-lg rounded-lg p-8 mb-16 transition-transform duration-200 hover:shadow-xl hover:translate-y-[-2px]">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 border-b-2 border-blue-600 pb-2 mb-10 inline-block pr-4">Projetos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    
+                    <!-- Card do Projeto: SaudMed Analytics -->
+                    <div class="project-card border border-gray-200 rounded-lg overflow-hidden shadow-md bg-gray-50 flex flex-col">
+                        <img src="https://raw.githubusercontent.com/CassioCandidoRibeiro/saudmed-analytics/main/saudmed_logo.jpg" alt="Logotipo SaudMed Analytics" class="w-full h-56 object-contain p-6 border-b border-gray-200 bg-white"/>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">SaudMed Analytics: Análise de Negócios</h3>
+                            <p class="text-gray-700 text-sm mb-5 flex-grow">
+                                Painel (Dashboard) para uma distribuidora de produtos hospitalares, extraindo dados diretamente do ERP em produção. O projeto gera relatórios de Business Intelligence (BI) com recomendações de compra para reposição de estoque, previsão de custos e monitoramento detalhado de vendas e fretes. Ele otimiza a tomada de decisões através da análise de produtos, clientes e finanças.
+                            </p>
+                            <h4 class="font-semibold text-base text-gray-900 mb-2">Ferramentas e Funcionalidades:</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-xs ml-4 mb-5">
+                                <li>Extração: Python (SQL Firebird Database)</li>
+                                <li>Transformação: Python (pandas, math, numpy, xlsxwriter)</li>
+                                <li>Implantação: Python (streamlit) </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3 mt-auto">
+                                <a href="https://github.com/CassioCandidoRibeiro/saudmed-analytics" target="_blank" class="bg-blue-600 text-white font-medium py-2 px-4 rounded-md text-sm transition-colors duration-200 hover:bg-blue-700 flex items-center gap-2">
+                                    <i class="fab fa-github"></i> Código
+                                </a>
+                                <a href="https://raw.githubusercontent.com/CassioCandidoRibeiro/saudmed-analytics/main/66d7f73a-6c37-4710-84b7-1a326576fe31.jpg" target="_blank" class="bg-emerald-600 text-white font-medium py-2 px-4 rounded-md text-sm transition-colors duration-200 hover:bg-emerald-700 flex items-center gap-2">
+                                    <i class="fas fa-external-link-alt"></i> Print
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card do Projeto: Dashboard estratégico para uma empresa marketplace de entrega de comida na Índia. -->
+                    <div class="project-card border border-gray-200 rounded-lg overflow-hidden shadow-md bg-gray-50 flex flex-col">
+                        <img src="https://raw.githubusercontent.com/CassioCandidoRibeiro/Curry_Company/main/logo.png" alt="Logotipo da Curry Company" class="w-full h-56 object-contain p-6 border-b border-gray-200 bg-white"/>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Dashboard para Marketplace de Comida</h3>
+                            <p class="text-gray-700 text-sm mb-5 flex-grow">
+                                Este projeto envolveu o uso de programação avançada, técnicas de manipulação de dados e um pensamento estratégico aprofundado para conceber e implementar um painel gerencial abrangente. O objetivo foi fornecer insights cruciais sobre as principais métricas de uma empresa de delivery de comida na Índia. O resultado é um painel robusto, hospedado em ambiente de nuvem e acessível via interface web, garantindo disponibilidade e escalabilidade.
+                            </p>
+                            <h4 class="font-semibold text-base text-gray-900 mb-2">Ferramentas utilizadas:</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-xs ml-4 mb-5">
+                                <li>Extração: Kaggle (dados públicos)</li>
+                                <li>Transformação: Python (pandas, plotly, folium, geopy, streamlit)</li>
+                                <li>Implantação: Streamlit Cloud (Github)</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3 mt-auto">
+                                <a href="https://github.com/CassioCandidoRibeiro/Curry_Company" target="_blank" class="bg-blue-600 text-white font-medium py-2 px-4 rounded-md text-sm transition-colors duration-200 hover:bg-blue-700 flex items-center gap-2">
+                                    <i class="fab fa-github"></i> Código
+                                </a>
+                                <a href="https://cassiocandidoribeiro-curry-company.streamlit.app" target="_blank" class="bg-emerald-600 text-white font-medium py-2 px-4 rounded-md text-sm transition-colors duration-200 hover:bg-emerald-700 flex items-center gap-2">
+                                    <i class="fas fa-external-link-alt"></i> App
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Seção "Sobre mim" -->
+            <section id="sobre-mim" class="bg-white shadow-lg rounded-lg p-8 mb-16 transition-transform duration-200 hover:shadow-xl hover:translate-y-[-2px]">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 border-b-2 border-blue-600 pb-2 mb-10 inline-block pr-4">Sobre mim</h2>
+                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+                    <div class="flex-shrink-0 lg:w-1/3 flex justify-center">
+                        <!-- Imagem de perfil -->
+                        <img src="https://avatars.githubusercontent.com/u/119451093?v=4" alt="Foto de perfil de Cássio Cândido Ribeiro" class="rounded-full w-64 h-64 object-cover border-4 border-blue-600 shadow-md"/>
+                    </div>
+                    <div class="flex-grow lg:w-2/3 text-gray-700 text-base leading-relaxed">
+                        <p class="mb-5">
+                            Meu nome é <b>Cássio. </b>Tenho 35 anos. Moro em Foz do Iguaçu.
+                             Desde adolescente mexo com informática. Meus primeiros códigos de programação foram criando macros em jogos.
+                             Mas acabei seguindo tentando seguir carreira acadêmica nos cursos de Química, Psicologia e Filosofia.
+                             Meu primeiro CRUD veio em 2022, quando participei do Programa de Talentos em Tecnologia da Informação e Comunicação (TIC)
+                             do <b class="font-semibold text-gray-900">Parque Tecnológico Itaipu</b> (PTI-BR).
+                             Durante esse Bootcamp, colaborei no desenvolvimento de um sistema robusto,
+                             utilizando Java no back-end, React no front, e NodeJS de API.
+                             Segui estudando programação até que identifiquei um forte alinhamento com a área de dados,
+                             o que me motivou a especializar os meus estudos para seguir carreira como Analista de Dados.
+                        </p>
+                        <p>
+                            Atualmente, ocupo um cargo como Assistente Administrativo na SaudMed,
+                             uma distribuidora de produtos hospitalares em Foz do Iguaçu.
+                             Além das funções administrativas nos setores de compras e financeiro,
+                             também resolvo todos os problemas relacionados a dados.
+                             Faço consultas SQL diretas no Banco de Dados em produção,
+                             para responder problemas de negócio.
+                             Também participo do desenvolvimento, manutenção e suporte
+                             de um painel de inteligência de negócios (business intelligence dashboard) utilizando Python (Pandas e Streamlit): SaudMed Analytics.
+                             Um sistema que gera relatórios detalhados de vendas, compras, estoque, logística e financeiro,
+                             incluindo cálculos de previsão de custo de reposição do estoque, margens de lucro e faturamento,
+                             com segmentações por data, cliente, vendedor, produto, marca e categoria, otimizando substancialmente a tomada de decisões gerenciais.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Seção de Contato -->
+            <section id="contato" class="bg-white shadow-lg rounded-lg p-8 mb-16 transition-transform duration-200 hover:shadow-xl hover:translate-y-[-2px]">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 border-b-2 border-blue-600 pb-2 mb-10 inline-block pr-4">Contato</h2>
+                <h4 class="text-lg text-gray-700 mb-10 text-left">
+                    Sinta-se à vontade para entrar em contato comigo pelo LinkedIn ou por E-mail.
+                </h4>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-10">
+                    <a href="https://www.linkedin.com/in/CassioCandidoRibeiro/" target="_blank" class="flex flex-col items-center space-y-2 text-blue-700 hover:text-blue-900 transition-colors duration-200 font-semibold text-lg p-5 rounded-lg bg-gray-50 shadow-sm hover:shadow-md border border-gray-200">
+                        <i class="fab fa-linkedin text-5xl text-blue-500"></i>
+                    </a>
+                    <a href="mailto:CassioCandidoRibeiro@gmail.com" class="flex flex-col items-center space-y-2 text-emerald-700 hover:text-emerald-900 transition-colors duration-200 font-semibold text-lg p-5 rounded-lg bg-gray-50 shadow-sm hover:shadow-md border border-gray-200">
+                        <i class="fas fa-envelope text-5xl text-blue-500"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Rodapé -->
+            <footer class="text-center text-gray-600 text-sm mt-12 p-8">
+                &copy; 2025 Cássio Cândido Ribeiro.
+            </footer>
+        </div>
+    </div>
+
+    <!-- Script para funcionalidade de exportação para PDF -->
+    <script>
+        // Aguarda o carregamento completo do DOM para garantir que todos os elementos existam
+        document.addEventListener('DOMContentLoaded', () => {
+            const exportPdfBtn = document.getElementById('exportPdfBtn');
+            const portfolioContent = document.getElementById('portfolioContent');
+            
+            // Adiciona um evento de clique ao botão de exportar
+            exportPdfBtn.addEventListener('click', () => {
+                // Opções de configuração para o PDF
+                const options = {
+                    margin: [10, 10, 10, 10], // Margens [top, left, bottom, right]
+                    filename: 'Analista de Dados - Cássio Cândido Ribeiro.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 }, // Aumenta a escala para melhor qualidade de imagem
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+
+                // Gera o PDF a partir do conteúdo da div 'portfolioContent'
+                html2pdf().set(options).from(portfolioContent).save();
+            });
+        });
+    </script>
+</body>
+</html>
